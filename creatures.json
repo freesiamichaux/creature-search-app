@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "name": "Pyrolynx",
+    "weight": 42,
+    "height": 32,
+    "special": {
+      "name": "Blazing Reflex",
+      "description": "Increases speed when hit by a Fire-type move."
+    },
+    "stats": [
+      {"name": "hp", "base_stat": 65},
+      {"name": "attack", "base_stat": 80},
+      {"name": "defense", "base_stat": 50},
+      {"name": "special-attack", "base_stat": 90},
+      {"name": "special-defense", "base_stat": 55},
+      {"name": "speed", "base_stat": 100}
+    ],
+    "types": [
+      {"name": "FIRE"}
+    ]
+  },
+
+  {
+    "id":2,
+    "name":"Aquoroc",
+    "weight":220,
+    "height":53,
+    "special":{"name":"Tidal Shield","description":"Raises defense when hit by a Water-type move."},
+    "stats":[
+      {"name":"hp","base_stat":85},
+      {"name":"attack","base_stat":90},
+      {"name":"defense","base_stat":120},
+      {"name":"special-attack","base_stat":60},
+      {"name":"special-defense","base_stat":70},
+      {"name":"speed","base_stat":40}
+    ],
+    "types":[{"name":"WATER"},{"name":"ROCK"}]
+  }
+]

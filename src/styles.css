@@ -1,0 +1,296 @@
+:root {
+    --bg-primary: #1a213f;
+    --bg-secondary: #242e59E6;
+    --color-text: #ecf0f1;
+    --color-border: #dfe2f0;
+    --white-color: #fff;
+    --bg-button:  #4CAF50;
+    --bg-table: #4CAF50;
+    --bg-table-head: #3e8e41;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+    line-height: 1.5;
+    background-color: var(--bg-primary);
+    color: var(--color-text);
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+/*CONTAINER PRINCIPAL*/
+.search-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    max-width: 400px;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    border: 0.5px solid var(--color-border);
+    border-radius: 10px;
+    background-color: var(--bg-secondary);
+}
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.search-section label {
+    font-size: 1rem;
+}
+
+#search-input {
+    width: 80%;
+    max-width: 300px;
+    padding: 0.4rem;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+}
+
+#search-button { 
+    width: 50%;
+    margin: 0 auto;
+    padding: 0.4rem;
+    background-color: var(--bg-button);
+    color: var(--white-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.creature-identity,
+.creature-features {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.creature-identity {
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem 2.5rem;
+}
+
+/*Tableau*/
+.table-features {
+    width: 100%;
+    background-color: var(--bg-table);
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+.table-features th, 
+.table-features td {
+    min-width: 100px;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid var(--white-color);
+}
+
+.table-features th {
+    background-color: var(--bg-table-head);
+    color: var(--white-color);
+}
+
+
+/*Creatures*/
+/* NOM ET ID */
+.name-and-id {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+#creature-name {
+    font-weight: bold;
+}
+
+#creature-id {
+    font-weight: bold;
+}
+
+/* SIZE */
+.size {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+/* TYPES */
+#types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 8px;
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+
+#types span {
+    padding: 0.3rem 0.8rem;
+    min-width: 60px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+
+/* COULEURS PAR TYPE */
+.electric { background-color: #fecc33; }
+.fire     { background-color: #ff6f52; }
+.water    { background-color: #42a1ff; }
+.grass    { background-color: #78cc55; }
+.ice      { background-color: #66ccfe; }
+.poison   { background-color: #c68bb7; }
+.fighting { background-color: #d3887e; }
+.ground   { background-color: #dfba52; }
+.flying   { background-color: #8899ff; }
+.psychic  { background-color: #ff66a3; }
+.bug      { background-color: #aabb23; }
+.rock     { background-color: #baaa66; }
+.ghost    { background-color: #9995d0; }
+.dragon   { background-color: #9e93f1; }
+.dark     { background-color: #b59682; }
+.steel    { background-color: #abaabb; }
+.fairy    { background-color: #ed99ed; }
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1024px) {
+    .search-app {
+        min-width: 500px;
+        max-width: 1200px;
+        margin: 1.5rem auto;
+        padding: 1.5rem 2rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+
+    .search-section {
+        max-width: 400px;
+        gap: 0.75rem;
+    }
+
+    .search-section label {
+        font-size: 1.5rem;
+    }
+
+    #search-button {
+        width: 50%;
+        font-size: 1.2rem;
+    }
+
+    .creature-identity,
+    .creature-features {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+    .creature-identity {
+        margin-bottom: 1.5rem;
+
+    }
+
+    .name-and-id,
+    .size,
+    #types {
+        font-size: 1.4rem;
+    }
+
+    .table-features th,
+    .table-features td {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .search-app {
+        min-width: 600px;
+        max-width: 1400px;
+        margin: 2rem auto;
+        padding: 1.5rem 2rem;
+
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .search-section {
+        max-width: 500px;
+    }
+
+    .search-section label {
+        font-size: 1.8rem;
+    }
+
+    #search-button {
+        width: 40%;
+        padding: 0.5rem;
+        font-size: 1.4rem;
+    }
+
+    .creature-identity,
+    .creature-features {
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .creature-identity {
+        margin-bottom: 2rem;
+
+    }
+
+    .name-and-id,
+    .size,
+    #types {
+        font-size: 1.8rem;
+    }
+
+    .table-features th,
+    .table-features td {
+        font-size: 1.8rem;
+    }
+}
